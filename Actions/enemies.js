@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Enemies extends Team {
     
     private ArrayList<NonPlayable> enemies;
-    private int Expe;
+    private int Exp1;
     public int Gold;    
     public boolean canon;
     public void setCanon (boolean canon) {
@@ -24,12 +24,12 @@ public class Enemies extends Team {
     
     public void setExpe () {
         for (NonPlayable enemy_found : enemies) {
-            Expe = Expe + enemy_found.getExpe();
+            Exp1 = Exp1 + enemy_found.getExpe();
         }
     }
     
-    public int getExpe () {
-        return Expe;
+    public int getExp1 () {
+        return Exp1;
     }
     
     public void setGold () {
