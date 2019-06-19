@@ -2,34 +2,34 @@ import java.util.ArrayList;
 
 public class Action {
     
-    protected String name;
-    protected Combatant user;
-    protected ArrayList<Combatant> targets;
-    protected Combatant target;
-    protected int damage;
+    protected String id;
+    protected Combatant player;
+    protected ArrayList<Combatant> opponent_list;
+    protected Combatant opponent;
+    protected int injury;
     
-    public Action (Combatant user,ArrayList<Combatant> targets) {
-        this.user = user;
-        this.targets = targets;
+    public Action (Combatant player,ArrayList<Combatant> opponent_list) {
+        this.player = player;
+        this.opponent_list = opponent_list;
     }
     
     public String getName () {
-        return name;
+        return id;
     }
     
-    public Combatant getUser () {
-        return user;
+    public Combatant get_user () {
+        return player;
     }
     
-    public ArrayList<Combatant> getTargets () {
-        return targets;
+    public ArrayList<Combatant> get_targets () {
+        return opponent_list;
     }
     
-    public Combatant getTarget () {
-        return target;
+    public Combatant get_target () {
+        return opponent;
     }
     
-    public int getDamage () {
-        return damage;
+    public int get_damage () {
+        return injury;
     }   
 }
