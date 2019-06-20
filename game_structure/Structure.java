@@ -24,8 +24,10 @@ public class Structure {
    
    public boolean defeated () {
         for (Combatant player : player_list) {
-            if (player.isAlive())
+            boolean test = player.is_alive();
+            if (test){
                 return false;
+            }
         }
         return true;
    }
@@ -33,10 +35,10 @@ public class Structure {
     public ArrayList<Combatant> players_alive () {
         ArrayList<Combatant> players_alive = new ArrayList<Combatant>();
         for (Combatant player : player_list) {
-            if (player.isAlive())
+            boolean test = player.is_alive();
+            if (test)
                 players_alive.add(player);
         }
         return players_alive;
     }
-    
 }
