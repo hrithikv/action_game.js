@@ -4,7 +4,7 @@ public class Monster extends Combatant implements Non_Playable{
         name = "Monster";
         weakness = "none";
         level = 8;
-        maxhealth = 500;
+        maxhealth = 499;
         energyMax = 100;
         accuracy = 50;
         int limit_health = maxhealth/2;
