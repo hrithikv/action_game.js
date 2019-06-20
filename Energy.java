@@ -1,4 +1,5 @@
 public class energy extends Playable {
+   String name = user_id;
    public energy(String user_id) {
    set_id(user_id);
    set_health(20);
