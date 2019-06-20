@@ -4,7 +4,7 @@ public class Enemies extends Team {
     
     private ArrayList<NonPlayable> enemies;
     private int Exp1;
-    public int Gold;    
+    public int Score;    
     public boolean canon;
     public void setCanon (boolean canon) {
         this.canon = canon;
@@ -28,17 +28,17 @@ public class Enemies extends Team {
         }
     }
     
-    public int getExp1 () {
-        return Exp1;
+    public int final_period () {
+        return exp1;
     }
     
-    public void setGold () {
+    public void setScore () {
         for (NonPlayable enemy : enemies) {
-            Gold = Gold + enemy.getReward();
+            Score = Score + enemy.getReward();
         }
     }
     
-    public int getGold () {
-        return Gold;
+    public int getScore () {
+        return Score;
     }
 }
