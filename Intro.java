@@ -1,6 +1,6 @@
 public class Intro {    
     public String[] intro_list = new String[3];
-    float morality;
+    public double morality;
     
     public ChapterIntro( String Intro_pos, String Intro_neu, String Intro_neg, int currentMorality, int hist) {
         intro_list[0] = Intro_pos;
