@@ -13,6 +13,9 @@ public class Enemies extends Team {
     public canon getCanon () {
         return canon;
     }
+    
+    // Create a List that keeps track of the attackers in sequential order
+    
     public void create (ArrayList<NonPlayable> enemies) {
         this.enemies = enemies;
     }
@@ -31,6 +34,8 @@ public class Enemies extends Team {
     public int final_period () {
         return exp1;
     }
+    
+    // Get the score of each attacker
     
     public void setScore () {
         for (NonPlayable enemy : enemies) {
