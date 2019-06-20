@@ -1,12 +1,12 @@
 public class result {
 
     public float[] change_energy = new float[3];
-    public String[] responses = new String[3];
+    public String[] reaction_list = new String[3];
     
-    public result( String positive, String neutral, String negative ) {
-        responses[0] = positive;
-        responses[1] = neutral;
-        responses[2] = negative;
+    public result( String pve, String neutral, String nve ) {
+        reaction_list[0] = pve;
+        reaction_list[1] = neutral;
+        reaction_list[2] = neve;
               
         change_energy[0] = 1;
         change_energy[1] = 0;
@@ -14,9 +14,13 @@ public class result {
     }
           
     public int Repr_Ind( String choice ) {
-        if ( choice.equals("A") ) 
+        public String choice1 = "A";
+        public String choice2 = "B";
+        System.out.println("Choice No. 1 = " + choice1);
+        System.out.println("Choice No. 2 = " + choice2);        
+        if ( choice.equals(choice1) ) 
             return int(0);
-        else if ( choice.equals("B") ) 
+        else if ( choice.equals(choice2) ) 
             return int(1);
         else
             return (2);
@@ -29,7 +33,7 @@ public class result {
     
     public String Response( String input ) { 
         int index = getRepr_Ind( input );
-        return responses[index]; 
+        return reaction_list[index]; 
     }
     
     public int ChangeWithResponse( String input, int token) {
