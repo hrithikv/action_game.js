@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Combat {
     
-    protected static String output = "";
+    puglic String output = "";
     
     protected Team opponent_list;
     protected ArrayList<Combatant> combatants_list;
-    protected int turnCounter;
+    private int turnCounter;
 
     public Combat () {
         opponent_list = new Team();
@@ -15,7 +15,7 @@ public class Combat {
         turnCounter = val_init;
     }
     
-    public void reset () {
+    public void replay () {
         Game.combat = new Combat();
     }
     
@@ -56,10 +56,10 @@ public class Combat {
         }
     }
     
-    public void battle01 () {
-        reset();
-        Behemoth behemoth = new Behemoth();
-        opponent_list.add(behemoth);
+    public void start_game () {
+        replay();
+        Monster player = new Monster();
+        opponent_list.add(player);
         battle();
     }
     
@@ -111,6 +111,6 @@ public class Combat {
     }
     public static void main (String[] args) {
         Combat begin = new Combat();
-        begin.battle01();
+        begin.start_game();
     }
 }
