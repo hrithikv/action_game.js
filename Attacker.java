@@ -1,15 +1,16 @@
 public class Attacker extends Playable {
     
-    public Attacker(String name) {
-        setName(name);
-        setHealth(150);
+    public Attacker(String id) {
+        set_name(id);
+        set_health(100);
     }
     
     public int Attack1(Character target){
       energy = energy-8;
       int conv_key1 = 20;
       int mult_key1 = 2;
-      new_damage = (getStrength() - (getStrength()-conv_key1));
+      int new_strength = getStrength()-conv_key1;
+      int new_damage = (getStrength() - (new_strength));
       int final_damage = ((int)(Math.random() * new_damage +(getStrength() - conv_key1)))*mult_key1;
       return final_damage;
     }
@@ -25,8 +26,8 @@ public class Attacker extends Playable {
     
     public void Attack3(){
         energy = energy - 10;
-        set_Accuracy(100);
-        set_speed(50);
+        set_accuracy(100);
+        set_speed(10);
     }
     
     public int attack(){
