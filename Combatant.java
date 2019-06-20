@@ -6,132 +6,103 @@ public abstract class Combatant {
     protected int maximum_health;         
     protected int energy;             
     protected int maximum_energy;            
-    protected int strength;           
-    protected int intelligence;       
-    protected int accuracy;           
+    protected int strength;          
     protected int speed;              
     protected int experience;                
     protected Story ongoing_story;
     
-    public abstract void attack (Combatant target);
+    public void attack (Combatant attacker);
     
     public boolean is_Alive () {
-        if (health > 0){
+        int tester = health;
+        if (tester > 0){
           return True;
          else{
           return False;
     }
     
-    public void setName (String name) {
-        this.name = name;
+    public void set_name (String id) {
+        this.name = id;
     }
     
-    public void setLevel (double level) {
-        this.level = level;
+    public void set_level (int progress) {
+        this.level = progress;
     }
 
-    public void sethealth (double health) {
-        this.health = health;
+    public void set_health (int welfare) {
+        this.health = welfare;
     }
     
-    public void setmaxhealth (int Maxhealth) {
-        this.maxhealth = maxhealth;
+    public void set_max_health (int max_point) {
+        this.maximum_health = max_point;
     }
     
-    public void setenergy (int energy) {
+    public void set_energy (float energy) {
         this.energy = energy;
     }
     
-    public void setmaxenergy (int Maxenergy) {
-        this.maxenergy = maxenergy;
+    public void set_max_energy (int energy_limit) {
+        this.maximum_energy = energy_limit;
     }
     
-    public void setStrength (int strength) {
+    public void set_strength (int strength) {
         this.strength = strength;
     }
     
-    public void setResistance (int resistance) {
-    this.resistance = resistance;
+    public void resistance (int player_resistance) {
+        this.resistance = player_resistance;
     }
     
-    public void setIntelligence (int intelligence) {
-        this.intelligence = intelligence;
+    public void setIntelligence (int player_int) {
+        this.intelligence = player_int;
     }
     
-    public void setWisdom (int wisdom){
+    public void set_wisdom (int wisdom){
         this.wisdom = wisdom;
     }
-    
-    public void setAccuracy (int accuracy) {
-        this.accuracy = accuracy;
-    }
-    
-    public void setSpeed (int speed) {
-        this.speed = speed;
-    }
-    
-    public void setExp (int exp) {
-        this.exp = exp;
-    }
-    
-    public void setElement(String element){
-        this.element = element;
-    }
-    
-    public void setWeakness(String weakness){
-        this.weakness = weakness;
-    }
-    
-    public String getName () {
+            
+    public String get_name () {
         return name;
     }
     
-    public String getElement() {
+    public String get_element() {
         return element;
 
     }
     
-    public String getWeakness() {
+    public String get_weakness() {
         return weakness;
     }
     
-     
-    public int getLevel () {
+    public int get_level () {
         return level;
     }
     
-    public int getHealth () {
+    public int get_health () {
         return health;
     } 
 
-    public int getHealthMax () {
-        return healthMax;
+    public int get_maximum_health () {
+        return maximum_health;
     }
-    
-    public int getMana () {
-        return mana;
-    }
-
-    public int getManaMax () {
-        return manaMax;
-    }
-    
-    public int getStrength () {
-        return strength;
-    }
-    public int getIntelligence () {
-        return intelligence;
-    }
-    
-    public int getAccuracy () {
+        
+    public int get_accuracy () {
         return accuracy;
     }
     
-    public int getSpeed () {
+    public int get_speed () {
         return speed;
     }
     
-    public int getExperience () {
+    public int get_energy () {
+        return energy;
+    } 
+
+    public int get_maximum_energy () {
+        return maximum_energy;
+    }
+
+    public int get_experience () {
         return experience;
     }
 }
